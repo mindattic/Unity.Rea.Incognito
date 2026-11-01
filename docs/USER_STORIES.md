@@ -86,3 +86,4 @@ _Nothing recorded yet._
 | U.INC-T45 | 2026-10-29 | chore | closed | Rename Unity.Incognito to Unity.Rea.Incognito everywhere: folder, GitHub, namespaces, docs, deployments (identifies it as reverse-engineered) | c90f86b |
 | U.INC-T46 | 2026-10-29 | chore | closed | Rename repo to Unity.Rea.Incognito: GitHub, local folder, in-repo asmdef/asset tree, ticket DB key | 81bd99f |
 | U.INC-T47 | 2026-10-31 | docs | closed | Update USER_STORIES.md | — |
+| U.INC-T48 | 2026-11-01 | fix | open | IncognitoNetPlayer.ReadInput() keeps polling real input for a bot-driven player in NetBotTest, overriding IncognitoBot's own SendControls calls every frame | — |

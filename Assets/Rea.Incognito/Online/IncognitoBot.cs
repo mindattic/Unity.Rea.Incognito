@@ -21,6 +21,7 @@ namespace Incognito.Online
         public async Task RunAsync(NetBot bot)
         {
             IncognitoNetPlayer me = await bot.LocalPlayer<IncognitoNetPlayer>();
+            me.BotDriven = true; // stop Update() from reading real input over this driver's own calls (U.INC-T48)
             await bot.Until(() => me.Seat >= 0, "the server to seat this bot");
             float start = me.X;
 

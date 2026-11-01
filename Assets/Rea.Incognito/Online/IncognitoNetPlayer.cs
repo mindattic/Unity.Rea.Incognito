@@ -4,7 +4,7 @@ using Incognito.Player;
 using Incognito.Settings;
 using Incognito.Weapon;
 using Incognito.World;
-using Unity.Multiplayer;      // NetEntity, NetBots, NetPlayer
+using Unity.Multiplayer;      // NetEntity, NetPlayer
 using Unity.Multiplayer.Core; // [ToServer], [Synced]
 using UnityEngine;
 
@@ -145,10 +145,20 @@ namespace Incognito.Online
             Publish(authority.World, id);
         }
 
+        /// <summary>
+        /// Set by <see cref="IncognitoBot"/> on the player object it drives, so <see cref="Update"/> stops
+        /// reading real input for it. <see cref="Unity.Multiplayer.NetBots.IsBot"/> only says this *process*
+        /// was launched with <c>-bot &lt;role&gt;</c>; a <c>NetBotTest</c> runs every bot client in-process (no
+        /// separate launch per bot), where that flag stays false for all of them, so it can't tell which
+        /// owned player is bot-driven. Tracking it on the entity itself works in both a real <c>-bot</c>
+        /// process and the in-process test harness (U.INC-T48).
+        /// </summary>
+        internal bool BotDriven { get; set; }
+
         private void Update()
         {
             if (!IsSpawned) return;
-            if (IsOwner && !NetBots.IsBot) ReadInput(); // a bot's driver makes the calls itself (IncognitoBot)
+            if (IsOwner && !BotDriven) ReadInput(); // a bot's driver makes the calls itself (IncognitoBot)
         }
 
         private void LateUpdate()
