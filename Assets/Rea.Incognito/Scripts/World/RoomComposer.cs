@@ -189,7 +189,7 @@ namespace Incognito.World
                 sr.color = new Color(1f, 1f, 1f, 0f);
                 var doorPosition = new Vector2(d.X, d.Y);
                 go.transform.position = GmToWorld(d.X, d.Y);
-                go.AddComponent<DoorExit>().Configure(doorPosition, d.Label, d.To, Convert(d.Enter), 0f, room, fade,
+                go.AddComponent<DoorExit>().Configure(doorPosition, d.Label, d.To, Convert(d.Enter), d.EnterX, room, fade,
                     playerAudioSource, assets.DoorOpenClip, cam);
             }
             foreach (float x in spec.Barriers)

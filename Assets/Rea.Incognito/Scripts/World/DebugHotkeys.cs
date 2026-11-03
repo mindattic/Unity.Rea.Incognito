@@ -67,7 +67,8 @@ namespace Incognito.World
             if (!showReadout) return;
 
             var player = FindFirstObjectByType<PlayerLocomotion>();
-            float x = player != null ? player.transform.position.x : 0f;
+            // obj_debug drew player.x, in original px (the world's state), not the transform's world units.
+            float x = player != null && player.State != null ? player.State.PositionX : 0f;
             readoutLabel.text = FormatReadout(SceneManager.GetActiveScene().name, x, GameInput.PointerScreenPosition);
         }
     }
