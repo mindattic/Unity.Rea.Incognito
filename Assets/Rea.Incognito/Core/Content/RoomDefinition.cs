@@ -151,14 +151,14 @@ namespace Incognito.Content
 
             if (string.IsNullOrWhiteSpace(DisplayName))
                 throw new SettingsValidationException(label + " needs a DisplayName.");
-            if (float.IsNaN(Width) || Width <= 0f)
+            if (float.IsNaN(Width) || float.IsInfinity(Width) || Width <= 0f)
                 throw new SettingsValidationException(label + "'s Width must be positive: " + Width);
             if (BackgroundSlices == null || BackgroundSlices.Length == 0)
                 throw new SettingsValidationException(label + " needs at least one background slice.");
             foreach (string slice in BackgroundSlices)
                 if (string.IsNullOrWhiteSpace(slice))
                     throw new SettingsValidationException(label + " has a blank background slice name.");
-            if (PlayerStartX < 0f || PlayerStartX > Width)
+            if (!(PlayerStartX >= 0f && PlayerStartX <= Width))
                 throw new SettingsValidationException(label + "'s PlayerStartX " + PlayerStartX + " is outside the room (width " + Width + ").");
 
             for (int i = 0; i < Lampposts.Length; i++)
@@ -182,7 +182,7 @@ namespace Incognito.Content
         private static void CheckNearRoom(string roomLabel, string what, float x, float width)
         {
             const float margin = 200f;
-            if (x < -margin || x > width + margin)
+            if (!(x >= -margin && x <= width + margin))
                 throw new SettingsValidationException(roomLabel + ": " + what + " at x=" + x + " is far outside the room (width " + width + ").");
         }
 

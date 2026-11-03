@@ -49,6 +49,9 @@ namespace Incognito.Content
                 throw new SettingsValidationException(label + " needs a Description.");
             if (Waypoints == null || Waypoints.Length == 0)
                 throw new SettingsValidationException(label + " needs at least one waypoint.");
+            foreach (float waypoint in Waypoints)
+                if (float.IsNaN(waypoint) || float.IsInfinity(waypoint))
+                    throw new SettingsValidationException(label + " has a waypoint that is not a finite number: " + waypoint);
             if (float.IsNaN(WalkSpeed) || WalkSpeed <= 0f)
                 throw new SettingsValidationException(label + "'s WalkSpeed must be positive: " + WalkSpeed);
             if (float.IsNaN(ArriveRange) || ArriveRange <= 0f)

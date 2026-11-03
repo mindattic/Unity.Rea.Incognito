@@ -123,7 +123,7 @@ namespace Incognito.Content
                 RoomDefinition room = FindRoom(npc.RoomId);
                 if (room == null)
                     throw new SettingsValidationException("NPC '" + npc.Id + "' names unknown room '" + npc.RoomId + "'.");
-                if (npc.SpawnX < 0f || npc.SpawnX > room.Width)
+                if (!(npc.SpawnX >= 0f && npc.SpawnX <= room.Width))
                     throw new SettingsValidationException(
                         "NPC '" + npc.Id + "'s SpawnX " + npc.SpawnX + " is outside room '" + room.Id + "' (width " + room.Width + ").");
             }
@@ -200,7 +200,7 @@ namespace Incognito.Content
         private static void CheckEnterX(string fromRoomId, string what, RoomEntranceKind enter, float enterX, RoomDefinition destination)
         {
             if (enter != RoomEntranceKind.At || destination == null) return;
-            if (enterX < 0f || enterX > destination.Width)
+            if (!(enterX >= 0f && enterX <= destination.Width))
                 throw new SettingsValidationException(
                     "Room '" + fromRoomId + "'s " + what + " enters '" + destination.Id + "' at x=" + enterX +
                     ", outside that room (width " + destination.Width + ").");
