@@ -30,7 +30,7 @@ _Nothing recorded yet._
 - **U.INC-US-A12 ✅** As a player, all text is drawn in the original's fonts (fnt_basic 12pt Arial, fnt_large, fnt_system) with the original's outlined-text look, as real UI Toolkit/TextMesh text rather than IMGUI, so the prose and labels read as they did. *(verified by `OriginalFontParityTests`, `GmTextTests` (Core.Tests) and `OriginalTextPlayTests` (PlayMode: `Room_npc_console_and_floating_text_use_the_original_fonts_and_outlines`).)*
 - **U.INC-US-A13 ✅** As a player, the game runs at the original's 1920x1080 reference with the original's screen-ratio setup (obj_startup), letterboxed on other aspects, starting fullscreen from the title as the original did. *(verified by `ScreenRatioTests` (Core.Tests) and `GameDisplayTests` (EditMode).)*
 - **U.INC-US-A14 ✅** As a player, every sprite and background a live original object or room uses is in the rebuild (spr_exit_side, spr_barrier, spr_command_prompt and its selected variant, spr_console, spr_icon_pistol and selected, spr_linewall and the rest of the inventory in RECONSTRUCTION.md section 10), proven by a test that diffs the original's live asset list against the rebuild's. *(verified by `OriginalArtParityTests` (Core.Tests: `Every_image_a_live_original_object_or_room_uses_is_catalogued_at_its_origin_and_on_disk`).)*
-- **U.INC-US-A15 ⬜** As the owner, the finished game is verified end to end against the reconstruction by a scripted run that plays title to every room and every mechanic and captures screenshots, so the repo can be called a complete proof of concept of the original.
+- **U.INC-US-A15 ✅** As the owner, the finished game is verified end to end against the reconstruction by a scripted run that plays title to every room and every mechanic and captures screenshots, so the repo can be called a complete proof of concept of the original.
 
 ## Tickets
 > Permanent log of every change and fix — this repo's ticket system. Rows are append-only: never
@@ -88,3 +88,6 @@ _Nothing recorded yet._
 | U.INC-T47 | 2026-10-31 | docs | closed | Update USER_STORIES.md | — |
 | U.INC-T48 | 2026-11-01 | fix | closed | IncognitoNetPlayer.ReadInput() keeps polling real input for a bot-driven player in NetBotTest, overriding IncognitoBot's own SendControls calls every frame | 39b0cca |
 | U.INC-T49 | 2026-11-01 | docs | closed | Update USER_STORIES.md | — |
+| U.INC-T50 | 2026-11-02 | docs | closed | Adopt MindAttic.Agency docs-site pipeline, publish README to GitHub Pages (HOUSE-LAW-14) | 26d42ad3fc6a2718d02fc6781e0643c766bb3295 |
+| U.INC-T51 | 2026-11-02 | fix | closed | Bughunt sweep, two passes: find and fix real bugs across tracked source (user request 2026-11-02) | abae13f |
+| U.INC-T52 | 2026-11-06 | chore | open | Link story U.INC-US-A15 (end-to-end verification) to its closed ticket U.INC-T13 and mark it done; re-render USER_STORIES.md | — |
