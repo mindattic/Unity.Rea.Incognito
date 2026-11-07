@@ -2,6 +2,7 @@ using Incognito.Audio;
 using Incognito.Controls;
 using Incognito.Display;
 using Incognito.Player;
+using Unity.Shared.Core;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -34,6 +35,9 @@ namespace Incognito.World
             // window_set_fullscreen(true) — the letterboxing itself is GameDisplay's, every frame.
             GameDisplay.EnterFullscreen();
             MusicPlayer.Play(music, musicVolume);
+
+            // --headless (U.INC-T54): nobody can press a key at the title, so go straight into the first room.
+            Headless.WhenActive(() => { if (this != null && !started) StartGame(); });
         }
 
         private void Update()

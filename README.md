@@ -90,6 +90,14 @@ which `Packages/manifest.json` references as local `file:` packages.
 The batch scripts (`tools/unity.ps1` underneath) need the Editor closed on this project, and keep
 each run's Unity log in `Logs/`.
 
+### Headless launches
+
+`powershell -File play.ps1 -Headless` runs the built player with no window for scripted testing
+(U.INC-T54): it goes through `..\Unity.Shared\tools\Start-Headless.ps1` (`--headless -batchmode
+-nographics`), skips the title straight into Bleecher Street, and waits for the
+`MINDATTIC_HEADLESS_READY Incognito` line in `Logs/play.log`. The player keeps running; stop it
+yourself. Without the flag nothing changes. See Unity.Shared's README, "Headless mode".
+
 ### Muted launches
 
 `play.ps1` launches muted: it sets `MINDATTIC_CLI_MUTED=1` and passes `-muted`, so a CLI or agent
