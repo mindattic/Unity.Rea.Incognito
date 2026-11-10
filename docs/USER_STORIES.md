@@ -90,4 +90,8 @@ _Nothing recorded yet._
 | U.INC-T49 | 2026-11-01 | docs | closed | Update USER_STORIES.md | — |
 | U.INC-T50 | 2026-11-02 | docs | closed | Adopt MindAttic.Agency docs-site pipeline, publish README to GitHub Pages (HOUSE-LAW-14) | 26d42ad3fc6a2718d02fc6781e0643c766bb3295 |
 | U.INC-T51 | 2026-11-02 | fix | closed | Bughunt sweep, two passes: find and fix real bugs across tracked source (user request 2026-11-02) | abae13f |
-| U.INC-T52 | 2026-11-06 | chore | open | Link story U.INC-US-A15 (end-to-end verification) to its closed ticket U.INC-T13 and mark it done; re-render USER_STORIES.md | — |
+| U.INC-T52 | 2026-11-06 | chore | closed | Link story U.INC-US-A15 (end-to-end verification) to its closed ticket U.INC-T13 and mark it done; re-render USER_STORIES.md | 8e741d3 |
+| U.INC-T53 | 2026-11-06 | chore | closed | Standardize run.ps1/run.bat at repo root per the Unity.Rea.* convention (part of U.CHN-T112) | e63d648 |
+| U.INC-T54 | 2026-11-06 | feature | closed | Adopt the shared off-by-default --headless launch mode (Unity.Shared) | f423a899c135683edda43522c94dbb85ac952eda |
+| U.INC-T55 | 2026-11-10 | chore | closed | Crash recovery: commit the command-catalog sync (.agent/commands/*.md) and regenerated docs/USER_STORIES.md left uncommitted by the session crash | — |
+| U.INC-T56 | 2026-11-10 | chore | open | Crash recovery: commit the command-catalog sync (.agent/commands/*.md) and regenerated docs/USER_STORIES.md left uncommitted by the session crash | — |
