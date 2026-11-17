@@ -95,4 +95,5 @@ _Nothing recorded yet._
 | U.INC-T54 | 2026-11-06 | feature | closed | Adopt the shared off-by-default --headless launch mode (Unity.Shared) | f423a899c135683edda43522c94dbb85ac952eda |
 | U.INC-T55 | 2026-11-10 | chore | closed | Crash recovery: commit the command-catalog sync (.agent/commands/*.md) and regenerated docs/USER_STORIES.md left uncommitted by the session crash | — |
 | U.INC-T56 | 2026-11-10 | chore | closed | Crash recovery: commit the command-catalog sync (.agent/commands/*.md) and regenerated docs/USER_STORIES.md left uncommitted by the session crash | — |
-| U.INC-T57 | 2026-11-10 | chore | open | Crash recovery / fleet sync: commit the regenerated docs/USER_STORIES.md left uncommitted after other tickets closed elsewhere | — |
+| U.INC-T57 | 2026-11-10 | chore | closed | Crash recovery / fleet sync: commit the regenerated docs/USER_STORIES.md left uncommitted after other tickets closed elsewhere | — |
+| U.INC-T58 | 2026-11-17 | docs | closed | Update USER_STORIES.md | — |
