@@ -488,8 +488,8 @@ Every system below is built. Core is `Assets/Rea.Incognito/Core` (engine-free), 
     keyboard and mouse into an engine-free `InputSnapshot` each frame; nothing calls
     `UnityEngine.Input`. Bindings are the original's keys (A/D or arrows, Shift, Z, Q, W, Escape,
     F1, F12, the mouse buttons and wheel), built in code rather than an `.inputactions` asset.
-  - *Shared packages (T25).* `com.mindattic.unity.shared` and `com.mindattic.capture` are local
-    `file:` packages from the sibling Unity.Shared and MindAttic.Capture clones.
+  - *Shared packages (T25).* `com.mindattic.unity.shared` and `com.mindattic.media.capture` are local
+    `file:` packages from the sibling Unity.Shared and MindAttic.Media.Capture clones.
   - *Project hygiene (T27).* Company MindAttic, product Incognito, application id
     `com.MindAttic.Incognito`, no Unity splash; the manifest carries only the modules the game and
     its shared packages use; `tools/{unity,build,test}.ps1` are the batch build and test entry

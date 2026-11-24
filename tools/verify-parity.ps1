@@ -8,7 +8,7 @@
   Unity batch mode with a graphics device (not -nographics), so the tour can screenshot:
     Logs/parity-tour/NN-tag.png   the tour's own PNGs (camera + HUD in one 1920x1080 frame)
     Logs/parity-tour.txt          one line per checklist row the run proved
-    (with -Capture) the same moments through MindAttic.Capture, switched on via MINDATTIC_CAPTURE_EDITOR.
+    (with -Capture) the same moments through MindAttic.Media.Capture, switched on via MINDATTIC_CAPTURE_EDITOR.
     Its grab waits for the end of a rendered frame, which a -batchmode Editor never reaches (it logs
     "Screenshot ... failed: The game is shutting down."), so it is opt-in; the PNGs above are the batch record.
   The run is muted: MINDATTIC_CLI_MUTED=1 and -muted (Unity.Shared's session mute, which
@@ -16,7 +16,7 @@
 .PARAMETER Sound
   Run with audio (no MINDATTIC_CLI_MUTED, no -muted).
 .PARAMETER Capture
-  Also enable MindAttic.Capture for the tour's TakeScreenshot calls (see above).
+  Also enable MindAttic.Media.Capture for the tour's TakeScreenshot calls (see above).
 .EXAMPLE
   powershell -File tools/verify-parity.ps1
 #>

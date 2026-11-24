@@ -460,7 +460,7 @@ that does not exist and any `decided:` id BIBLE.md does not record, so the list 
 The tour found one real gap, fixed here: the built rooms never listed the NPC as a console object,
 so `list sheep` said "none" (the console row below now proves it lists the NPC's `SHP#0097`).
 
-Screenshots: MindAttic.Capture's `TakeScreenshot` is called at each moment, but its grab waits for the
+Screenshots: MindAttic.Media.Capture's `TakeScreenshot` is called at each moment, but its grab waits for the
 end of a rendered frame, which a `-batchmode` Editor never reaches, so the batch run's record is the
 tour's own PNGs (`tools/verify-parity.ps1 -Capture` turns Capture on for a run that has a real frame).
 

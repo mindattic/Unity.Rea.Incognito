@@ -6,7 +6,7 @@
         "Rea.Incognito.Runtime",
         "Unity.Shared.Core",
         "Unity.InputSystem",
-        "MindAttic.Capture.Unity",
+        "MindAttic.Media.Capture.Unity",
         "UnityEngine.TestRunner"
     ],
     "includePlatforms": [],

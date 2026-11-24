@@ -62,7 +62,7 @@ UI Toolkit). Where the original was plainly broken, the rebuild plays the way it
 
 Requirements: Windows, Unity **6000.4.3f1** (Unity Hub's default install path), the .NET SDK (for
 the Core tests), and [Unity.Shared](https://github.com/mindattic/Unity.Shared),
-[MindAttic.Capture](https://github.com/mindattic/MindAttic.Capture),
+[MindAttic.Media.Capture](https://github.com/mindattic/MindAttic.Media.Capture),
 [Unity.Multiplayer](https://github.com/mindattic/Unity.Multiplayer) and
 [MindAttic.Components](https://github.com/mindattic/MindAttic.Components) cloned beside this repo,
 which `Packages/manifest.json` references as local `file:` packages.

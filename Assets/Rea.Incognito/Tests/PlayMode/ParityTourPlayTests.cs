@@ -13,7 +13,7 @@ using Incognito.Terminal;
 using Incognito.Typing;
 using Incognito.Weapon;
 using Incognito.World;
-using MindAttic.Capture.Unity;
+using MindAttic.Media.Capture.Unity;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -35,7 +35,7 @@ namespace Incognito.Tests
     /// and the shop. Every mechanic RECONSTRUCTION.md records is exercised and each proof is a
     /// <c>Row("id")</c>; the parity checklist in docs/RECONSTRUCTION.md section 11 has one row per id,
     /// and <c>ParityChecklistTests</c> (Core.Tests) fails if a row is unticked or names an id this
-    /// file no longer has. Screenshots are taken at the key moments through MindAttic.Capture
+    /// file no longer has. Screenshots are taken at the key moments through MindAttic.Media.Capture
     /// (<see cref="CaptureUnity.TakeScreenshot"/>, on when tools/verify-parity.ps1 enables it) and are
     /// also written as PNGs to Logs/parity-tour when the run has a graphics device. Walking, aiming,
     /// firing, the cursor, clicks on NPCs, props, the pistol icon and the exits, and the Q, Z, W and
@@ -794,7 +794,7 @@ namespace Incognito.Tests
         }
 
         /// <summary>
-        /// A screenshot through MindAttic.Capture (on only when the run enabled it) and, when the run
+        /// A screenshot through MindAttic.Media.Capture (on only when the run enabled it) and, when the run
         /// has a graphics device, a PNG in Logs/parity-tour: the camera and the HUD panel render
         /// into one 1920x1080 texture for a frame (batch mode never reaches WaitForEndOfFrame, so
         /// ScreenCapture cannot be used).
