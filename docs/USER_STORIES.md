@@ -97,3 +97,15 @@ _Nothing recorded yet._
 | U.INC-T56 | 2026-11-10 | chore | closed | Crash recovery: commit the command-catalog sync (.agent/commands/*.md) and regenerated docs/USER_STORIES.md left uncommitted by the session crash | — |
 | U.INC-T57 | 2026-11-10 | chore | closed | Crash recovery / fleet sync: commit the regenerated docs/USER_STORIES.md left uncommitted after other tickets closed elsewhere | — |
 | U.INC-T58 | 2026-11-17 | docs | closed | Update USER_STORIES.md | — |
+| U.INC-T59 | 2026-11-24 | fix | open | Hunt Unity.Rea.Incognito for real bugs (rooms, input, saves, edge cases) against docs/RECONSTRUCTION.md and fix every confirmed one without changing gameplay (owner rule: fix bugs only); any fix too big for this session goes to its own fix task under Port bug fixes | — |
+| U.INC-T60 | 2026-11-24 | chore | closed | Unity.Rea.Incognito uses the com.mindattic.media.capture Unity package | children done |
+| U.INC-T61 | 2026-11-24 | chore | closed | Unity.Rea.Incognito: manifest, PlayMode test asmdef, ParityTourPlayTests.cs using, README, docs and tools/verify-parity.ps1 use MindAttic.Media.Capture; compiles | 93a2818 |
+| U.INC-T62 | 2026-11-26 | feature | open | Unity.Rea.Incognito: adopt (or confirm) the shared run menu over deploy-lib.ps1 Publish-Unity, run Redeploy, and confirm the Development (Debug) and Release Windows players land and start at R:\MindAttic\Apps\Unity.Rea.Incognito\Debug and \Release; repoint anything in the repo still naming an old build path. Outcome: both players exist under R: and launch | — |
+| U.INC-T63 | 2026-11-27 | feature | open | Confirmed bugs fixed and a recorded Release play-through that matches the original | — |
+| U.INC-T64 | 2026-11-27 | feature | open | Fix every confirmed bug without changing gameplay | — |
+| U.INC-T65 | 2026-11-27 | feature | open | The deployed Release player played start to finish against RECONSTRUCTION | — |
+| U.INC-T66 | 2026-11-27 | feature | open | Players deployed on R: and the owner sign-off | — |
+| U.INC-T67 | 2026-11-27 | feature | open | Debug and Release players deploy to R:\MindAttic\Apps and launch | — |
+| U.INC-T68 | 2026-11-27 | feature | open | The owner plays the Release player end to end | — |
+| U.INC-T69 | 2026-11-27 | chore | open | Play the Release player from R:\MindAttic\Apps\Unity.Rea.Incognito\Release start to finish (title, every room, NPCs, doors and the console, to the last room) against docs/RECONSTRUCTION.md, record the run and its evidence in RECONSTRUCTION.md, and file a fix task under Port bug fixes for each gap | — |
+| U.INC-T70 | 2026-11-27 | chore | open | OWNER ACTION, not for agents: play the Release player from R:\MindAttic\Apps\Unity.Rea.Incognito\Release end to end (title, every room, NPCs, doors and the console, to the last room) and sign off the faithful-port milestone, or file what is wrong | — |
